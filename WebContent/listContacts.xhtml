@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Contatos</title>
+    </h:head>
+    <h:body>
+      <h:form>
+      <h:messages/>
+      <h1>Lista de contatos</h1>
+		<h:dataTable value="#{contactsMBean.contacts}" var="contact" border="1">
+	  		<h:column>
+    			<f:facet name="header">Nome</f:facet>
+    			#{contact.name}
+    		</h:column>
+    			<h:column>
+    			<f:facet name="header">Telefone</f:facet>
+    			#{contact.phone}
+    		</h:column>
+    		
+	  </h:dataTable>
+	  <h:commandLink action="#{contactsMBean.newContact}"  value="Cadastrar novo contato"/> <br/>
+	  </h:form>
+    </h:body>
+</html>

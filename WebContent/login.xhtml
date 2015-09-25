@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+      <title>Login</title>
+    </h:head>
+    <h:body>
+      <h:messages/>
+      <h:form>
+        <table> 
+          <tr>
+            <td> Usuario:* </td>
+            <td> <h:inputText value="#{loginMBean.user.username}" size="50" /> </td>
+          </tr>
+
+          <tr>
+            <td> Senha:* </td>
+            <td> <h:inputSecret value="#{loginMBean.user.password}" /> </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+            <h:commandButton value="Login" action="#{loginMBean.login}" />
+            <h:commandButton value="Registro" action="#{loginMBean.register}" />
+          </td>
+          </tr> 
+        </table>
+        * : Campos obrigatórios.
+      </h:form>
+    </h:body>
+  </html>

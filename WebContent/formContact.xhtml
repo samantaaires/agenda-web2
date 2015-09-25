@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+      <title>Login</title>
+    </h:head>
+    <h:body>
+      <h:messages/>
+      <h:form>
+        <table> 
+          <tr>
+            <td> Nome:* </td>
+            <td> <h:inputText value="#{contactsMBean.contact.name}" size="50" /> </td>
+          </tr>
+
+          <tr>
+            <td> Telefone:* </td>
+            <td> <h:inputText value="#{contactsMBean.contact.phone}" /> </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+            <h:commandButton value="Cadastrar" action="#{contactsMBean.createNewContact}" />
+          </td>
+          </tr> 
+        </table>
+        * : Campos obrigatórios.
+      </h:form>
+    </h:body>
+  </html>
